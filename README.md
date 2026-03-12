@@ -19,17 +19,16 @@ operation-ditwah/
 │   ├── scenarios.txt           # Ambiguous crisis scenarios
 │   ├── incidents.txt           # Critical rescue incidents
 │   └── news_feed.txt           # Raw 30-item news feed
-├── output/
+├── outputs/
 │   ├── classified_messages.xlsx
 │   └── flood_report.xlsx
-├── parts/
-│   ├── part1_classifier.py     # Few-shot classification
-│   ├── part2_temperature.py    # Temperature stress test
-│   ├── part3_logistics.py      # CoT & ToT rescue planning
-│   ├── part4_token_budget.py   # Token economics / spam filter
-│   └── part5_news_pipeline.py  # News feed extraction pipeline
+├── notebooks/
+│   ├── part1.ipynb     # Few-shot classification
+│   ├── part2.ipynb   # Temperature stress test
+│   ├── part3.ipynb     # CoT & ToT rescue planning
+│   ├── part4.ipynb   # Token economics / spam filter
+│   └── part5.ipynb  # News feed extraction pipeline
 ├── .env.example
-├── requirements.txt
 └── README.md
 ```
 
@@ -79,7 +78,7 @@ Output: District: Colombo | Intent: Info | Priority: Low
 | Tool | Purpose |
 |------|---------|
 | Python | Core language |
-| OpenAI / Claude API | LLM backbone |
+| Google /  Groq | LLM backbone |
 | Pydantic | Schema validation |
 | Pandas | Data processing & Excel export |
 | tiktoken | Token counting |
@@ -91,14 +90,11 @@ Output: District: Colombo | Intent: Info | Priority: Low
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/operation-ditwah.git
-cd operation-ditwah
+git clone https://github.com/yourusername/Crisis Management.git
+cd Crisis Management
 ```
 
 ### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
 
 ### 3. Set up environment variables
 ```bash
@@ -108,15 +104,13 @@ cp .env.example .env
 
 `.env.example`:
 ```
-OPENAI_API_KEY=your_key_here
-# or
-ANTHROPIC_API_KEY=your_key_here
+GEMINI_API_KEY=your_key_here
 ```
 
 ### 4. Run any part
 ```bash
-python parts/part1_classifier.py
-python parts/part5_news_pipeline.py
+python parts/part1.ipynb
+python parts/part2.ipynb
 ```
 
 ---
@@ -148,7 +142,7 @@ python parts/part5_news_pipeline.py
 ## 👤 Author
 
 **Your Name**  
-[LinkedIn](https://linkedin.com/in/yourprofile) • [GitHub](https://github.com/yourusername)
+[LinkedIn](https://www.linkedin.com/in/achintha-malinda/) • [GitHub](https://github.com/AchinthaMalinda)
 
 ---
 
